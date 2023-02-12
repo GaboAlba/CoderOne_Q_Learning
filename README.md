@@ -5,7 +5,7 @@
 CoderOne is a competition where participants develop a variety of AI agents to play the game Bomberman aginst one enemy(normally a human player or another AI agent). In this particular case this agent would be being developed for the Dungeons-and-data-structures Python version of this competition. 
 
 ## How to run this agent?
- Please follow the instructions in the following link to install the game and create your virtual environment. 
+ Please follow the instructions in the following link to install the game and create your virtual environment. That `.gz` file can be found as part of this repository
  
  https://www.notion.so/Getting-Started-438550daf0234e3fa53e8179ea00066f
  
