@@ -159,7 +159,7 @@ class Trainer :
         global steps_done
         sample = random.random()
         eps_threshold = self.EPS_END + (self.EPS_START - self.EPS_END) * \
-        math.exp(-1. * self.steps_done / self.EPS_DECAY)
+        		math.exp(-1. * self.steps_done / self.EPS_DECAY)
         self.steps_done += 1
         if sample >= eps_threshold :
             with torch.no_grad() :
@@ -192,6 +192,7 @@ class Trainer :
                 display.display(plt.gcf())
     
     def optimize_model() :
+	#PENDING	
         pass
 
 
@@ -260,23 +261,20 @@ class NeuralNetwork :
                     case other :
                         state = -1
                 self.Board[x][y] = state
+		
+		## PLAYER STATE MUST BE READ HERE
+		## AMMO WILL BE USED AS PARAMETER
         return  self.Board
 
-    def Policy(self) :
+    def Policy(self, state) :
         return 0
 
     def GetAction(self,state) :
         #self.output = self.Policy(state)
         return state   ## Change this for policy in the future
-    
-    def CreateNeuralNetwork(self) :
-        #InputSize = len(self.input())
-        pass
 
-    class Trainer :
-        def __init__(self) -> None:
-            pass
 
+# Testing functionality
 def main() :
     game_state = {'is_over': True, 
     'tick_number': 1128, 
