@@ -11,7 +11,7 @@ CoderOne is a competition where participants develop a variety of AI agents to p
  
  After this is done three things must be copied inside the following directory `~\venv\Lib\site-packages\coderone\dungeon`. 
   1. `RL_Agent folder`
-  2. `IntelAgent.py`
+  2. `IntelAgent.py` (Right now it only does random movements, as it is being used to test the game state reads for accuracy)
   3. `my_agent.py` (This one a sample agent that does random movements to test different functionalities)
 
 After this is done, inside the virtual environment, and inside the `dungeon` directory run the following command to test it
