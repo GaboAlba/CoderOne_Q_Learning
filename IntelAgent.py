@@ -20,8 +20,10 @@ class Agent :
         #action = policy()
         actions = ['','u','d','l','r','p']
         NN = NeuralNetwork()
-        state = NN.GetState(game_state,player_state)
-        print(state)
+        GameState, PlayerAmmo, PlayerReward = NN.GetState(game_state,player_state)
+        print(GameState)
+        print(PlayerAmmo)
+        print(PlayerReward)
         action = NN.GetAction(random.choice(actions))
 
         return action

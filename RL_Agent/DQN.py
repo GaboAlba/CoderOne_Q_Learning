@@ -83,15 +83,15 @@ PLAYER STATE
 # actions = ['','u','d','l','r','p']
 
 ACRONYMS
-Ammo = "a" = 1
-Treasure = 't' = 2
-Bomb = "b" = 3
-SoftBlock = 'sb' = 4
-OreBlock = 'ob' = 5
-IndestructibleBlock = 'ib' = 6
-Player0 = 'p0' = 0
-Player1 = 'p1' = 1
-Clear = "c"  = 7
+Ammo = "a" 
+Treasure = 't' 
+Bomb = "b"
+SoftBlock = 'sb'
+OreBlock = 'ob'
+IndestructibleBlock = 'ib'
+Player0 = 'p0'
+Player1 = 'p1' 
+Clear = "c" 
 
 """      
 
@@ -260,7 +260,11 @@ class NeuralNetwork :
                     case other :
                         state = -1
                 self.Board[x][y] = state
-        return  self.Board
+        ## PLAYER STATE READING
+        self.player_state = player_state.__dict__
+        self.ammo = self.player_state["ammo"]
+        self.reward = self.player_state["reward"]
+        return  self.Board, self.ammo, self.reward
 
     def Policy(self) :
         return 0
