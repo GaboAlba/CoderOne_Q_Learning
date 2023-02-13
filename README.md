@@ -14,15 +14,21 @@ CoderOne is a competition where participants develop a variety of AI agents to p
   2. `IntelAgent.py` (Right now it only does random movements, as it is being used to test the game state reads for accuracy)
   3. `my_agent.py` (This one a sample agent that does random movements to test different functionalities)
 
-After this is done, inside the virtual environment, and inside the `dungeon` directory run the following command to test it
+After this is done, inside the virtual environment, and inside the `dungeon` directory run the following command to install all dependencies
+
+`pip install requirements.txt`
+
+Once all dependencies are sorted, please run this command to make sure everything is working right.
 
 `python -m coderone.dungeon.main my_agent.py IntelAgent.py`
+
+You should see the Board Matrix, the player ammo quantity and the player reward being printed in the terminal, as well as the knight move do random actions in game.
 
 ## Current state of the development
 The development of this agent consists in the following stages
  1. [x] Testing movement and ability interaction with the game 
  2. [x] Read the game state and normalize the input as numbers
- 3. [ ] Read the player state and get the ammo and reward from it 
+ 3. [x] Read the player state and get the ammo and reward from it 
  4. [x] Develop the Neural Network constructor
  5. [x] Develop the Neural Network training logic
  6. [ ] Develop the optimizing algorithm
